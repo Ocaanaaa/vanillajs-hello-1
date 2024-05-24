@@ -8,8 +8,8 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
-};
-let who = ["The cat", "My Friend", "The milkman", "His lion"];
+
+  let who = ["The cat", "My Friend", "The milkman", "His lion"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "my phone", "the car"];
   let when = [
@@ -19,31 +19,34 @@ let who = ["The cat", "My Friend", "The milkman", "His lion"];
     "during my lunch",
     "while I was praying"
   ];
-  const getRandomElement = (ListElement) => {
-    let element = ""
-    element = ListElement[Math.floor{Math.random()* ListElement.length}]
+  const getRandomElement = ListElement => {
+    let element = "";
+    element = ListElement[Math.floor(Math.random() * ListElement.length)];
     return element;
-  }
+  };
   console.log(
-   getRandomElement(who) +
-   " " + 
-   getRandomElement(action) +
-    " " +
-   getRandomElement(what) +
+    getRandomElement(who) +
       " " +
-   getRandomElement(when));
+      getRandomElement(action) +
+      " " +
+      getRandomElement(what) +
+      " " +
+      getRandomElement(when)
+  );
 
+  let excuseGen = document.querySelector("#excuse");
+  excuseGen.innerHTML =
+    getRandomElement(who) +
+    " " +
+    getRandomElement(action) +
+    " " +
+    getRandomElement(what) +
+    " " +
+    getRandomElement(when);
 
-  
-  let excuseGen = document.querySelector("#excuse")
-  excuseGen.innerHTML = 
-  getRandomElement(who) +
-  " " + 
-  getRandomElement(action) +
-   " " +
-  getRandomElement(what) +
-     " " +
-  getRandomElement(when));
+  console.log(excuseGen);
+};
+
 
 
   console.log(excuseGen);
